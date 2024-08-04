@@ -44,23 +44,26 @@ public class Sabillon_Cristina_Tarea_2 {
                 
                 //EJERCICIO DIAGONAL
                 System.out.println("\nImprimir de manera diagonal.");
-                String palabra = ""; 
+                String palabra = "";
+                char diagonal = 0;
 
                 System.out.println("Ingrese una palabra: ");
                 palabra = scan.next().toUpperCase();
 
                 for (int index = 0; index < palabra.length(); index++) {
+                    diagonal = palabra.charAt(index);
                     for (int espacio = 0; espacio < index; espacio++) {
                         System.out.print(" ");
                     }
-                    System.out.println(palabra.charAt(index));
+                    System.out.println(diagonal);
                 }
 
                 for (int index = palabra.length() - 1; index >= 0; index--) {
+                    diagonal = palabra.charAt(index);                    
                     for (int espacio = 0; espacio < index; espacio++) {
                         System.out.print(" ");
                     }
-                    System.out.println(palabra.charAt(index));
+                    System.out.println(diagonal);
                 }            
             }
 
@@ -140,5 +143,4 @@ public class Sabillon_Cristina_Tarea_2 {
             }
         }
     }
-    
 }
