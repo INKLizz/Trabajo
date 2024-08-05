@@ -99,8 +99,8 @@ public class Sabillon_Cristina_Tarea_2 {
                 
                 //PALINDROMA, NO PALINDROMA
                 System.out.println("\nLista de Palindroma y No Palindroma");
-                String palabras = "", palabra_alreves = "", non, palindroma = "", no_palindroma = "";
-                int cantidad, contador = 0, numero = 0, num = 0;
+                String palabras = "", palabra_alreves = "", palabra_normal = "", palindroma = "", no_palindroma = "";
+                int cantidad, contador = 0, contador_palindroma = 0, contador_nopalindroma = 0;
 
                 System.out.println("Ingresar la cantidad de palabras: ");
                 cantidad = scan.nextInt();
@@ -117,17 +117,17 @@ public class Sabillon_Cristina_Tarea_2 {
                     System.out.print("Palabra # " + contador + ": ");
                     palabras = scan.next().toLowerCase();
 
-                    for ( int i = palabras.length()-1; i>=0 ; i--){
-                        palabra_alreves += palabras.charAt(i);
+                    for ( int index = palabras.length()-1; index >= 0 ; index--){
+                        palabra_alreves += palabras.charAt(index);
                         }
 
                     if (palabras.equals(palabra_alreves)){
-                        numero++;
-                        palindroma +=numero + ".- " + palabra_alreves + "\n";
+                        contador_palindroma++;
+                        palindroma += contador_palindroma + ".- " + palabra_alreves + "\n";
                     }else{
-                        num++;
-                        non = palabras;
-                        no_palindroma += num + ".- " + non + " \n";        
+                        contador_nopalindroma++;
+                        palabra_normal = palabras;
+                        no_palindroma += contador_nopalindroma + ".- " + palabra_normal + " \n";        
                     }
                 }
                 System.out.println("\nPalindroma: ");
