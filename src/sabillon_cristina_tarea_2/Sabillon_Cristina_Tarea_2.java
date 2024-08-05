@@ -51,18 +51,18 @@ public class Sabillon_Cristina_Tarea_2 {
                 palabra = scan.next().toUpperCase();
 
                 for (int index = 0; index < palabra.length(); index++) {
-                    diagonal = palabra.charAt(index);
                     for (int espacio = 0; espacio < index; espacio++) {
                         System.out.print(" ");
                     }
+                    diagonal = palabra.charAt(index);
                     System.out.println(diagonal);
                 }
 
                 for (int index = palabra.length() - 1; index >= 0; index--) {
-                    diagonal = palabra.charAt(index);                    
                     for (int espacio = 0; espacio < index; espacio++) {
                         System.out.print(" ");
                     }
+                    diagonal = palabra.charAt(index);
                     System.out.println(diagonal);
                 }            
             }
